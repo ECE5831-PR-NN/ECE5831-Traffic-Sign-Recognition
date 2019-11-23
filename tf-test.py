@@ -8,7 +8,7 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 data_dir = tf.keras.utils.get_file(origin='http://cvrr.ucsd.edu/LISA/Datasets/signDatabasePublicFramesOnly.zip',
-                                         fname='LISA_set', untar=True)
+                                         fname='LISA_set', extract=True, )
 import pathlib
 data_dir = pathlib.Path(data_dir)
 

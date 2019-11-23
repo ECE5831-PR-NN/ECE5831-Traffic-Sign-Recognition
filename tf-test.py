@@ -59,7 +59,7 @@ print (CLASS_NAMES)
 #data_dir = pathlib.Path("C:/Users/Splinter/Pictures/")
 
 # TODO:
-# Continue load and preprocess image example to load dataset as a Tensorflow dataset.
+# Continue load and preprocess image example to load dataset as a Tensorflow dataset (https://www.tensorflow.org/tutorials/load_data/images).
 # Once data set is ready and loaded, run on CNN in tf-cnn-test.py file
 # Go from there
 

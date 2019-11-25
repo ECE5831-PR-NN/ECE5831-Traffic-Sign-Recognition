@@ -16,8 +16,8 @@ import pathlib
 AUTOTUNE = tf.data.experimental.AUTOTUNE
 
 # Values are random right now
-IMG_WIDTH = 32
-IMG_HEIGHT = 32
+IMG_WIDTH = 64
+IMG_HEIGHT = 64
 BATCH_SIZE = 32
 
 # TODO: 
@@ -76,6 +76,7 @@ def show_batch(image_batch, label_batch):
       plt.imshow(image_batch[n])
       plt.title(CLASS_NAMES[label_batch[n]==1][0].title())
       plt.axis('off')
+  plt.show()
 
 #data_dir = tf.keras.utils.get_file(origin='http://cvrr.ucsd.edu/LISA/Datasets/signDatabasePublicFramesOnly.zip',
 #                                         fname='LISA_set', extract=True, )

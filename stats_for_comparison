@@ -1,0 +1,55 @@
+Vs noisy data:
+
+70/1 - 0s - loss: 0.6697 - accuracy: 0.8714
+0.87142855
+
+Test against clean data with more neurons
+
+70/1 - 0s - loss: 0.0647 - accuracy: 0.9714
+0.9714286
+
+Test against noisy data with more neurons
+
+70/1 - 0s - loss: 0.0160 - accuracy: 0.9857
+0.98571426
+
+Test against noisy rotated data with more neurons
+
+---
+
+Vs noisy rotated data
+
+70/1 - 0s - loss: 6.1887 - accuracy: 0.5714
+0.5714286
+
+Test against clean data with more neurons
+
+70/1 - 0s - loss: 6.1887 - accuracy: 0.5714
+0.5714286
+
+Test against noisy data with more neurons
+
+70/1 - 0s - loss: 2.7335 - accuracy: 0.6714
+0.67142856
+
+Test against noisy rotated data with more neurons
+
+--- 
+
+"optimized" model
+
+70/1 - 0s - loss: 0.0342 - accuracy: 0.9714
+0.9714286
+
+Test against clean data with more neurons
+
+70/1 - 0s - loss: 0.5479 - accuracy: 0.9286
+0.9285714
+
+Test against noisy data with more neurons
+
+70/1 - 0s - loss: 1.9120 - accuracy: 0.7143
+0.71428573
+
+Test against noisy rotated data with more neurons
+

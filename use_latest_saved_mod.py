@@ -13,6 +13,8 @@ from PIL import Image
 import os
 import re
 import pathlib
+import tkinter as tk
+from tkinter import filedialog
 
 # Should match image dimensions in CNN initial layer
 IMG_WIDTH = 32
@@ -21,19 +23,23 @@ IMG_HEIGHT = 32
 # Should be a common divisor of both sets to 
 BATCH_SIZE = 70
 
-model_dir = "/tmp/traffic_sign/"
+model_dir = "/tmp/"
 model_dir = pathlib.Path(model_dir)
+models_made = np.array([item.name for item in model_dir.glob('*')])
+print(models_made)
+model_name = input("Model name: ")
+model_dir = model_dir/model_name
 models_made = np.array([item.name for item in model_dir.glob('*')]).astype(np.float)
 print(models_made)
-#mod_to_use = input("Which model version to use? ")
-#if round(float(mod_to_use),1) in models_made:
-#    latest_mod = mod_to_use
-latest_mod = 1.0
+mod_to_use = input("Which model version to use? ")
+if round(float(mod_to_use),1) in models_made:
+    latest_mod = mod_to_use
 
 loaded = tf.keras.models.load_model(str(model_dir/str(latest_mod)))
 
-data_dir = r'.'
-test_data_dir = data_dir + '\TestingDataNoise'
+root = tk.Tk()
+test_data_dir = filedialog.askdirectory(title='Pick folder with Testing Data', initialdir='.')
+root.destroy()
 test_data_dir = pathlib.Path(test_data_dir)
 
 CLASS_NAMES = np.array([item.name for item in test_data_dir.glob('*')])
